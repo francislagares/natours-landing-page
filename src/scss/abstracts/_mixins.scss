@@ -1,0 +1,74 @@
+// Clearing floats
+@mixin clearfix {
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+// Centers block elements both, horizontally or vertically
+@mixin center($position) {
+  position: absolute;
+  @if ($position == 'both') {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($position == 'horizontal') {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($position == 'vertical') {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+// @mixin box-shadow(){}
+
+/* Media queries manager mixin
+
+0 - 600px     Phone
+600 - 900px   Tablet portrait
+900 - 1200    Tablet landscape
+[1200 - 1800] This is our current styles
+1800px + :    Big desktop
+
+$breakpoint argument options:
+
+- mobile
+- portrait
+- landscape
+- desktop
+
+1em = 16px
+
+This is the workflow in which we apply styles => 
+base + typography > general layout + grid > page layout + components
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == 'mobile' {
+    // 600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == 'portrait' {
+    // 900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == 'landscape' {
+    // 1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == 'desktop' {
+    @media (min-width: 112.5em) {
+      // 1800 px
+      @content;
+    }
+  }
+}

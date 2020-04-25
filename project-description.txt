@@ -1,0 +1,17 @@
+This is the landing page for the Natours project. 
+The website is built with HTML5 / CSS3 / SASS / BEM Architecture.
+In this project I demonstrate the power of these technologies by
+following best practices as far as web development is concerned.
+
+init: 'barebones setup for natours website'
+
+
+NOTES for how background images url work with sass.
+
+1. Important to point out that 
+   We must specify urls just ONE level up as if we were at main.scss
+   because when imported urls will resolve from main.scss and not individual files.
+
+2. Inline elements behave like text no matter what tag we put inside be it an img, span and so on.
+
+3. Define a mixin for box-shadows
