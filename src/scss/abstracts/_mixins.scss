@@ -49,24 +49,24 @@ base + typography > general layout + grid > page layout + components
 @mixin respond($breakpoint) {
   @if $breakpoint == 'mobile' {
     // 600px
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       @content;
     }
   }
   @if $breakpoint == 'portrait' {
     // 900px
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       @content;
     }
   }
   @if $breakpoint == 'landscape' {
     // 1200px
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       @content;
     }
   }
   @if $breakpoint == 'desktop' {
-    @media (min-width: 112.5em) {
+    @media only screen and (min-width: 112.5em) {
       // 1800 px
       @content;
     }

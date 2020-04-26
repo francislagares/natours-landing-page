@@ -48,6 +48,10 @@
   &__radio-group {
     width: 45%;
     display: inline-block;
+
+    @include respond(portrait) {
+      width: 50%;
+    }
   }
 
   &__radio-input {
@@ -59,6 +63,11 @@
     cursor: pointer;
     position: relative;
     padding-left: 5rem;
+
+    @include respond(portrait) {
+      font-size: 1.5rem;
+      padding-left: 4rem;
+    }
   }
 
   &__radio-button {

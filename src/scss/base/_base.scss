@@ -28,7 +28,7 @@ html {
   }
 
   @include respond(mobile) {
-    // 1rem = 8px -- 8px / 16px = 50%
+    // 1rem = 4.8px -- 4.8px / 16px = 30%
     font-size: 30%; // 1rem = 4.8px
   }
 }
@@ -40,4 +40,9 @@ body {
   @include respond(portrait) {
     padding: 0;
   }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }

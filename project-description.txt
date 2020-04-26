@@ -15,3 +15,6 @@ NOTES for how background images url work with sass.
 2. Inline elements behave like text no matter what tag we put inside be it an img, span and so on.
 
 3. Define a mixin for box-shadows
+4. Write media queries for popup window.
+5. Make responsive HTML images for popup and stories with density and resolution technique.
+5. Make responsive CSS background images.

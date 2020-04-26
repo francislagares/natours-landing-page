@@ -9,14 +9,34 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include respond(portrait) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(mobile) {
+    transform: skewX(0);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
     float: left;
     position: relative;
-    shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
+    border-radius: 50%;
     transform: translateX(-3rem) skewX(12deg);
+
+    @supports (clip-path: polygon(0 0)) {
+      clip-path: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+    }
+
+    @include respond(mobile) {
+      transform: translateX(-3rem) skewX(0);
+      height: 17rem;
+    }
   }
 
   &__image {
@@ -27,6 +47,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(mobile) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
