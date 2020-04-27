@@ -5,11 +5,11 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
   entry: './src/js/main.js',
-  mode: 'development',
+  mode: 'production',
   output: {
     filename: 'js/[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: '/natours-landing-page/'
   },
   devServer: {
     contentBase: 'dist',
@@ -76,7 +76,7 @@ module.exports = {
       filename: 'css/styles.css'
     }),
     new FaviconsWebpackPlugin({
-      logo: 'src/img/favicon.png',
+      logo: './src/img/favicon.png',
       prefix: 'img/'
     })
   ]

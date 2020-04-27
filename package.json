@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "This is the landing page for the Natours project. ",
   "main": "index.js",
+  "homepage": "https://francislagares.github.io/natours-landing-page/",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "deploy": "gh-pages -d dist"
   },
   "repository": "https://github.com/francislagares/natours-landing-page",
   "author": "Francis Lagares",
@@ -17,6 +19,7 @@
     "css-loader": "^3.5.2",
     "favicons-webpack-plugin": "^3.0.1",
     "file-loader": "^6.0.0",
+    "gh-pages": "^2.2.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.2.0",
     "mini-css-extract-plugin": "^0.9.0",
