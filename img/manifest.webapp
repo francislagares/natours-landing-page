@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "natours",
+  "description": "This is the landing page for the Natours project. ",
+  "icons": {
+    "60": "/natours-landing-page/img/firefox_app_60x60.png",
+    "128": "/natours-landing-page/img/firefox_app_128x128.png",
+    "512": "/natours-landing-page/img/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Francis Lagares",
+    "url": null
+  }
+}
