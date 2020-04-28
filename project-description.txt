@@ -18,3 +18,6 @@ NOTES for how background images url work with sass.
 4. Write media queries for popup window.
 5. Make responsive HTML images for popup and stories with density and resolution technique.
 5. Make responsive CSS background images.
+
+// Webpack 4 series
+6. Setup Webpack 4 from localhost to Github Pages.
