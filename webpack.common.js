@@ -55,7 +55,7 @@ module.exports = {
 
   plugins: [
     new FaviconsWebpackPlugin({
-      logo: './src/img/favicon.png', // IMPORTANT url has to be set relative
+      logo: './src/img/favicon.png', // IMPORTANT url has to be set relative if not throws error at yarn build
       prefix: 'img/'
     })
   ]
